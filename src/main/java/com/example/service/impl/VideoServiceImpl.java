@@ -15,6 +15,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 @Service
 public class VideoServiceImpl implements VideoService {
 
@@ -28,11 +29,11 @@ public class VideoServiceImpl implements VideoService {
     private CategoryMapper categoryMapper;
 
     @Override
-    public List<Video> getAll( PageInfo<Video> pageInfo) {
-        int pageSize=pageInfo.getPageSize();
+    public List<Video> getAll(PageInfo<Video> pageInfo) {
+        int pageSize = pageInfo.getPageSize();
         int pageNum = pageInfo.getPageNum();
-        int start = pageSize * (pageNum-1);
-        return videoMapper.selectAll(start,pageSize);
+        int start = pageSize * (pageNum - 1);
+        return videoMapper.selectAll(start, pageSize);
     }
 
     @Override
@@ -41,10 +42,10 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public List<Video> getByName(String name,PageInfo pageInfo) {
-        int start = (pageInfo.getPageNum()-1) * pageInfo.getPageSize();
+    public List<Video> getByName(String name, PageInfo pageInfo) {
+        int start = (pageInfo.getPageNum() - 1) * pageInfo.getPageSize();
         System.out.println(start);
-        return videoMapper.selectByNameAndPage(name,start,pageInfo.getPageSize());
+        return videoMapper.selectByNameAndPage(name, start, pageInfo.getPageSize());
     }
 
     @Override
@@ -53,20 +54,20 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public List<Video> getAllVideosByCondition(Video video,String year) {
+    public List<Video> getAllVideosByCondition(Video video, String year) {
         Integer temp = null;
         Integer pre = null;
         Integer last = null;
 
-        if(year.equals("更早")){
+        if (year.equals("更早")) {
             last = 1999;
-        }else if(year.equals("2010-2000")){
+        } else if (year.equals("2010-2000")) {
             pre = 2000;
             last = 2010;
-        }else if (!year.equals("")){
+        } else if (!year.equals("")) {
             temp = Integer.parseInt(year);
         }
-        return videoMapper.findVideoAndCategoryByCondition(video,temp,pre,last);
+        return videoMapper.findVideoAndCategoryByCondition(video, temp, pre, last);
     }
 
     @Override
@@ -85,15 +86,15 @@ public class VideoServiceImpl implements VideoService {
         Integer pre = null;
         Integer last = null;
 
-        if(year.equals("更早")){
+        if (year.equals("更早")) {
             last = 1999;
-        }else if(year.equals("2010-2000")){
+        } else if (year.equals("2010-2000")) {
             pre = 2000;
             last = 2010;
-        }else if (!year.equals("全部") && !year.equals("")){
+        } else if (!year.equals("全部") && !year.equals("")) {
             temp = Integer.parseInt(year);
         }
-        return videoMapper.selectCountByCondition(type,category,location,temp,pre,last);
+        return videoMapper.selectCountByCondition(type, category, location, temp, pre, last);
     }
 
     @Override
@@ -101,18 +102,18 @@ public class VideoServiceImpl implements VideoService {
         Integer temp = null;
         Integer pre = null;
         Integer last = null;
-        if(year.equals("更早")){
+        if (year.equals("更早")) {
             last = 1999;
-        }else if(year.equals("2010-2000")){
+        } else if (year.equals("2010-2000")) {
             pre = 2000;
             last = 2010;
-        }else if (!year.equals("全部") && !year.equals("")){
+        } else if (!year.equals("全部") && !year.equals("")) {
             temp = Integer.parseInt(year);
         }
-        int pageSize=pageInfo.getPageSize();
+        int pageSize = pageInfo.getPageSize();
         int pageNum = pageInfo.getPageNum();
-        int start = pageSize * (pageNum-1);
-        List<Video> videos = videoMapper.selectAllByCondition(type, category, location, temp,start,pageSize,pre,last);
+        int start = pageSize * (pageNum - 1);
+        List<Video> videos = videoMapper.selectAllByCondition(type, category, location, temp, start, pageSize, pre, last);
         pageInfo.setList(videos);
         return videos;
     }
@@ -127,7 +128,7 @@ public class VideoServiceImpl implements VideoService {
         return videoMapper.findVideoWithCatrgory(id);
     }
 
-    public List<VideoDetail> getDetailById(int id){
+    public List<VideoDetail> getDetailById(int id) {
         return videoDetailMapper.getByVideoId(id);
     }
 
@@ -137,25 +138,25 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public void insVideo(String name,Integer totalEpisode,Integer currentEpisode,String imgPath, Integer type2, List<Integer> category, String starring, Integer year, String location, Integer statue,String description) {
-        videoMapper.insVideo(name,totalEpisode,currentEpisode, type2,starring, year, location, statue, imgPath,description);
+    public void insVideo(String name, Integer totalEpisode, Integer currentEpisode, String imgPath, Integer type2, List<Integer> category, String starring, Integer year, String location, Integer statue, String description) {
+        videoMapper.insVideo(name, totalEpisode, currentEpisode, type2, starring, year, location, statue, imgPath, description);
 
         int vid = videoMapper.selectIdByName(name);
-        for (int i =0 ;i<category.size();i++){
-            if (category.get(i) != null){
-                categoryMapper.insCategory(vid,category.get(i));
+        for (int i = 0; i < category.size(); i++) {
+            if (category.get(i) != null) {
+                categoryMapper.insCategory(vid, category.get(i));
             }
         }
     }
 
     @Override
-    public int updVideo(int vid,String name,Integer totalEpisode,Integer currentEpisode,String imgPath, Integer type2, List<Integer> category, String starring, Integer year, String location, Integer statue,String description) {
-        int result = videoMapper.updVideo(name,totalEpisode,currentEpisode, type2,starring, year, location, statue, imgPath,description,vid);
+    public int updVideo(int vid, String name, Integer totalEpisode, Integer currentEpisode, String imgPath, Integer type2, List<Integer> category, String starring, Integer year, String location, Integer statue, String description) {
+        int result = videoMapper.updVideo(name, totalEpisode, currentEpisode, type2, starring, year, location, statue, imgPath, description, vid);
 
         categoryMapper.delCategory(vid);
-        for (int i =0 ;i<category.size();i++){
-            if (category.get(i) != null){
-                categoryMapper.insCategory(vid,category.get(i));
+        for (int i = 0; i < category.size(); i++) {
+            if (category.get(i) != null) {
+                categoryMapper.insCategory(vid, category.get(i));
             }
         }
         return result;
@@ -163,7 +164,7 @@ public class VideoServiceImpl implements VideoService {
 
     @Override
     public int insVideoDetail(int id, String title, int episode) {
-        return videoDetailMapper.insVideoDetail(id,title,episode);
+        return videoDetailMapper.insVideoDetail(id, title, episode);
     }
 
     @Override

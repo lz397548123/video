@@ -2,10 +2,7 @@ package com.example.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.pojo.*;
-import com.example.service.CategoryService;
-import com.example.service.ManagerService;
-import com.example.service.UserService;
-import com.example.service.VideoService;
+import com.example.service.*;
 import com.example.utils.CodeImageUtil;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
@@ -27,7 +24,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Controller
-@RequestMapping("/manager")
+@RequestMapping("manager")
 public class ManagerController {
     @Resource
     private UserService userServiceImpl;
@@ -40,6 +37,9 @@ public class ManagerController {
 
     @Resource
     private CategoryService categoryServiceImpl;
+
+    @Resource
+    private NewsService newsServiceImpl;
 
 
     @RequestMapping("getCode")
@@ -515,5 +515,78 @@ public class ManagerController {
         }
         map.put("result", categoryServiceImpl.insCategory(name, pid));
         return map;
+    }
+
+    @RequestMapping("news/list")
+    public String newsList(HttpServletRequest request) {
+        List<News> news = newsServiceImpl.selectAllNews();
+        request.setAttribute("news", news);
+        return "manager/newsList";
+    }
+
+    //    @RequestMapping("video/list")
+//    public String video(HttpServletRequest request) {
+//        List<Video> videos = videoServiceImpl.getAllVideos();
+//        List<Category> type = categoryServiceImpl.selByPid(0);
+//        request.setAttribute("videos", videos);
+//        request.setAttribute("type", type);
+//        return "manager/videolist";
+//    }
+    @RequestMapping("news/update")
+    @ResponseBody
+    public Map<String, Object> updateNews(HttpServletRequest request, MultipartFile file, Integer id , String name) {
+        int result;
+        if (file != null) {
+            String filename = file.getOriginalFilename();   //获取文件名
+            String suffix = filename.substring(filename.lastIndexOf("."));
+            String src = request.getServletContext().getRealPath("file/video/images/轮播图/");
+            File dest = new File(src + "/" + id + suffix);
+            String imgPath = "file/video/images/轮播图/" + id + suffix;
+            System.out.println(imgPath);
+            try {
+                FileUtils.copyInputStreamToFile(file.getInputStream(), dest);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            result = newsServiceImpl.updNews(name, imgPath, id);
+        } else {
+            result = newsServiceImpl.updNews(name, null, id);
+        }
+
+        Map<String, Object> map = new HashMap<>();
+        if (result == 1) {
+            map.put("code", 1);
+        } else {
+            map.put("code", 0);
+        }
+        return map;
+    }
+
+    @RequestMapping("news/getNewsById")
+    @ResponseBody
+    public News getNewsById(Integer id) {
+        return newsServiceImpl.selectNewsById(id);
+    }
+
+    @RequestMapping("news/updateForNews")
+    public String updateForNews(HttpServletRequest request, MultipartFile file, Integer id , String name) {
+        if (file != null) {
+            String filename = file.getOriginalFilename();   //获取文件名
+            String suffix = filename.substring(filename.lastIndexOf("."));
+            String src = request.getServletContext().getRealPath("file/video/images/轮播图/");
+            File dest = new File(src + "/" + id + suffix);
+            String imgPath = "file/video/images/轮播图/" + id + suffix;
+            try {
+                FileUtils.copyInputStreamToFile(file.getInputStream(), dest);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            newsServiceImpl.updNews(name, imgPath, id);
+        } else {
+            newsServiceImpl.updNews(name, null, id);
+        }
+        List<News> news = newsServiceImpl.selectAllNews();
+        request.setAttribute("news", news);
+        return "manager/newsList";
     }
 }

@@ -47,7 +47,7 @@
 <body>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">想看视频后台管理系统</div>
+        <div class="layui-logo">视频后台管理系统</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <a class="layui-layout-left title" style="">
             视频详情
@@ -92,11 +92,7 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">视频分类管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="manager/category/list">视频分类列表</a></dd>
-                        <dd><a href="manager/category/add">添加分类</a></dd>
-                    </dl>
+                    <a href="manager/news/list">新闻列表</a>
                 </li>
             </ul>
         </div>

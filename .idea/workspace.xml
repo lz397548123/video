@@ -10,30 +10,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02d04433-538f-490b-b106-740a91436896" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/user/avatar/liang-1608620714960.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/NewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/NewsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/pojo/News.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/NewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/service/impl/NewsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/NewsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/user/avatar/32f1f77f-e0cd-4bb7-be2e-fdba2f6bfd9d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/user/avatar/a170f16e-43c9-41d0-b482-ce3068d2b858.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/user/avatar/liang-1608625481427.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/images/金刚川.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-010.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-011.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-012.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-02.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-03.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-04.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-05.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-06.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-07.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-08.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/入间同学入魔了-09.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/八佰-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/分手大师-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/功夫-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/十二个想死的孩子-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/在地下城寻求邂逅是否搞错了什么 第二季-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/大秦赋-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/好小子们-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/好莱坞往事-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/姜子牙-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/左耳-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/悬崖上的金鱼姬-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/我想吃掉你的胰脏-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/柳列的音乐专辑-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/紧急救援-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/绿皮书-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/file/video/videos/诛仙-01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/newsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4516d6e4-1558-4f79-a674-fd82117cb326.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4516d6e4-1558-4f79-a674-fd82117cb326.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager/user_detail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager/userlist.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager/videolist.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/home.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/video/play.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/video/play1.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/video/video_detail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/common/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mapper/VideoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mapper/VideoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/service/impl/VideoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/功夫.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/好小子.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/慎重勇者.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/狄仁杰2四大天王.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/超人高中生们.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/过春天.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/file/video/images/轮播图/5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/addCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/addCategory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/categoryList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/categoryList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/user_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/user_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/userlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/userlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/video_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/video_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/manager/videolist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/manager/videolist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/user/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/user/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/video/play1.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/video/play1.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/11-HTML5-视频播放器-.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/11-HTML5-视频播放器-.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +82,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="mybatis-mapper" />
+        <option value="Interface" />
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -90,6 +132,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java-Code\video\src\main\webapp\file\user\avatar" />
+      <recent name="D:\Java-Code\video\src\main\webapp\file\video\videos" />
+      <recent name="D:\Java-Code\video\src\main\webapp\file\video\images" />
+      <recent name="D:\Java-Code\video\src\main\webapp\file\video" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -98,6 +143,19 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.61" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.61" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -196,7 +254,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608619704760</updated>
       <workItem from="1608619707490" duration="6282000" />
-      <workItem from="1608684134970" duration="1162000" />
+      <workItem from="1608684134970" duration="22750000" />
     </task>
     <servers />
   </component>

@@ -70,6 +70,9 @@
                         <dd><a href="manager/category/add">添加分类</a></dd>
                     </dl>
                 </li>
+                <li class="layui-nav-item">
+                    <a href="manager/news/list">新闻列表</a>
+                </li>
             </ul>
         </div>
     </div>

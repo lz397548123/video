@@ -18,7 +18,7 @@
 <body>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">想看视频后台管理系统</div>
+        <div class="layui-logo">视频后台管理系统</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <a class="layui-layout-left" style="line-height: 60px;color: #d0cbc1;margin-left: 20px;">
             首页
@@ -68,6 +68,9 @@
                         <dd><a href="manager/category/add">添加分类</a></dd>
                     </dl>
                 </li>
+                <li class="layui-nav-item">
+                    <a href="manager/news/list">新闻列表</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -79,7 +82,7 @@
 
     <div class="layui-footer">
         <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
+        © 梁壮、张家豪、喻修飞、曹赛博、张金龙
     </div>
 </div>
 <script>

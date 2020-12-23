@@ -741,10 +741,11 @@
     <table id="231" parent="7" name="admins"/>
     <table id="232" parent="7" name="category"/>
     <table id="233" parent="7" name="history"/>
-    <table id="234" parent="7" name="user"/>
-    <table id="235" parent="7" name="user_collection"/>
-    <table id="236" parent="7" name="video_category"/>
-    <table id="237" parent="7" name="video_detail"/>
-    <table id="238" parent="7" name="videos"/>
+    <table id="234" parent="7" name="news"/>
+    <table id="235" parent="7" name="user"/>
+    <table id="236" parent="7" name="user_collection"/>
+    <table id="237" parent="7" name="video_category"/>
+    <table id="238" parent="7" name="video_detail"/>
+    <table id="239" parent="7" name="videos"/>
   </database-model>
 </dataSource>
